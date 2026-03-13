@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Services — Neria Solutions</title>
+  <title>Projects — Neria Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -21,89 +21,105 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
       <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
     </ul>
   </nav>
 
   <section class="page-hero">
     <div class="container">
-      <div class="page-hero-eyebrow"><span class="label-line"></span>What We Do</div>
-      <h1>Our <em>Core Services</em></h1>
-      <p class="page-hero-sub">From scientific software to educational tools and renewable energy — we build solutions that create lasting impact.</p>
+      <div class="page-hero-eyebrow"><span class="label-line"></span>Our Work</div>
+      <h1>Projects &<br><em>Initiatives</em></h1>
+      <p class="page-hero-sub">From agricultural monitoring to entertainment platforms — a look at what we're building.</p>
     </div>
   </section>
 
-  <section class="services-section">
+  <section class="projects-section">
     <div class="container">
-      <div class="services-full-grid">
 
-        <div class="service-full-card">
-          <div class="service-full-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
-          </div>
-          <div>
-            <h3>Science Solutions</h3>
-            <p>We develop applications that enhance scientific theories into real-world impactful tools. From farm monitoring systems to data archiving platforms, our science solutions are purpose-built for researchers, field workers, and institutions across South Africa.</p>
-            <div class="service-features">
-              <span>Research Software</span>
-              <span>Data Capture & Archiving</span>
-              <span>Farm Monitoring</span>
-              <span>GIS Integration</span>
-              <span>Cloud Systems</span>
-            </div>
+      <div class="projects-filter">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">In Progress</button>
+        <button class="filter-btn">Planned</button>
+        <button class="filter-btn">Agriculture</button>
+        <button class="filter-btn">Education</button>
+        <button class="filter-btn">Energy</button>
+        <button class="filter-btn">Entertainment</button>
+      </div>
+
+      <div class="projects-full-grid">
+
+        <div class="project-full-card">
+          <div class="project-status in-progress">In Progress</div>
+          <h3>Farm Mapping & Monitoring</h3>
+          <p>Applications for agricultural farm mapping, monitoring, data capture, storage, and archiving. Built to help South African farmers track land health, crop cycles, and resource usage in real time.</p>
+          <div class="project-tags">
+            <span>Agriculture</span><span>GIS</span><span>Data Capture</span><span>Cloud</span>
           </div>
         </div>
 
-        <div class="service-full-card">
-          <div class="service-full-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        <div class="project-full-card">
+          <div class="project-status in-progress">In Progress</div>
+          <h3>Monate-Event</h3>
+          <p>A comprehensive digital event management platform making entertainment more accessible across South Africa. Discover, create, and manage events with ease.</p>
+          <div class="project-tags">
+            <span>Entertainment</span><span>Web App</span><span>Events</span>
           </div>
-          <div>
-            <h3>Educational Tools</h3>
-            <p>Creating apps that teach maths and science in native South African languages. We believe every learner deserves high-quality STEM education in a language they understand. Our tools are designed for classrooms, self-paced learning, and AI-powered tutoring.</p>
-            <div class="service-features">
-              <span>STEM Learning Apps</span>
-              <span>Native Language Support</span>
-              <span>AI-Powered Tutoring</span>
-              <span>Curriculum Aligned</span>
-              <span>Mobile First</span>
-            </div>
+          <a href="https://monate-event.co.za" target="_blank" class="project-link">Visit monate-event.co.za →</a>
+        </div>
+
+        <div class="project-full-card">
+          <div class="project-status planned">Planned</div>
+          <h3>Smart Irrigation System</h3>
+          <p>An IoT-powered irrigation control system that uses soil health data and weather patterns to automate and optimise water usage for small and large-scale farms.</p>
+          <div class="project-tags">
+            <span>Agriculture</span><span>IoT</span><span>Sustainability</span>
           </div>
         </div>
 
-        <div class="service-full-card">
-          <div class="service-full-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          </div>
-          <div>
-            <h3>Renewable Energy Solutions</h3>
-            <p>Innovating sustainable energy solutions for communities in need. We research and build technology around solar, wind, and smart irrigation to improve quality of life in underserved communities — particularly in rural South Africa.</p>
-            <div class="service-features">
-              <span>Solar Technology</span>
-              <span>Wind Energy Research</span>
-              <span>Smart Irrigation</span>
-              <span>Community Energy</span>
-              <span>Sustainability</span>
-            </div>
+        <div class="project-full-card">
+          <div class="project-status planned">Planned</div>
+          <h3>Soil Health Monitoring</h3>
+          <p>Sensor-based monitoring tools that give farmers real-time insight into soil composition, moisture levels, and nutrient deficiencies to optimise crop yields.</p>
+          <div class="project-tags">
+            <span>Agriculture</span><span>Hardware</span><span>Data</span>
           </div>
         </div>
 
-        <div class="service-full-card">
-          <div class="service-full-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <div class="project-full-card">
+          <div class="project-status planned">Planned</div>
+          <h3>AI-Powered Tutoring</h3>
+          <p>An intelligent tutoring system for South African learners that delivers STEM content in native languages using adaptive AI. Designed for both schools and self-paced learners.</p>
+          <div class="project-tags">
+            <span>Education</span><span>AI</span><span>Native Languages</span>
           </div>
-          <div>
-            <h3>Custom Software Development</h3>
-            <p>Full-stack development of web and mobile applications tailored to your specific needs. Whether you need a web platform, mobile app, or API integration — our team brings 6+ years of hands-on development experience to your project.</p>
-            <div class="service-features">
-              <span>Web Applications</span>
-              <span>Mobile Apps</span>
-              <span>API Development</span>
-              <span>Cloud Deployment</span>
-              <span>Full-Stack</span>
-            </div>
+        </div>
+
+        <div class="project-full-card">
+          <div class="project-status planned">Planned</div>
+          <h3>STEM Learning Game</h3>
+          <p>A gamified mobile learning experience that makes maths and science engaging for learners in grades 4–12, with curriculum-aligned content in multiple South African languages.</p>
+          <div class="project-tags">
+            <span>Education</span><span>Mobile</span><span>Gamification</span>
+          </div>
+        </div>
+
+        <div class="project-full-card">
+          <div class="project-status planned">Planned</div>
+          <h3>Solar-Powered Water Pumps</h3>
+          <p>Research and development of affordable solar-powered water pump solutions for rural communities without reliable access to electricity or clean water.</p>
+          <div class="project-tags">
+            <span>Energy</span><span>Hardware</span><span>Community</span>
+          </div>
+        </div>
+
+        <div class="project-full-card">
+          <div class="project-status planned">Planned</div>
+          <h3>Wind Energy Research</h3>
+          <p>Applied research into small-scale wind energy solutions suitable for South African climatic conditions, targeting rural electrification and off-grid applications.</p>
+          <div class="project-tags">
+            <span>Energy</span><span>Research</span><span>Sustainability</span>
           </div>
         </div>
 
@@ -115,9 +131,9 @@
     <div class="container">
       <div class="cta-box">
         <div class="cta-orb"></div>
-        <h2>Have a Project in Mind?</h2>
-        <p>Tell us what you're building and let's see how we can help make it a reality.</p>
-        <a href="contact.html" class="btn-primary btn-light">Start a Conversation</a>
+        <h2>Want to Collaborate?</h2>
+        <p>If you have an idea that aligns with our mission, we'd love to hear about it.</p>
+        <a href="contact.html" class="btn-primary btn-light">Get in Touch</a>
       </div>
     </div>
   </section>
