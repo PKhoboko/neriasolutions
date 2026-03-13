@@ -1,42 +1,74 @@
-// Nav scroll effect
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 20);
-});
+/* =============================================
+   NERIA SOLUTIONS — main.js
+   Theme toggle, nav, mobile menu, animations
+   ============================================= */
 
-// Mobile menu
-const toggle = document.getElementById('navToggle');
-const navLinks = document.getElementById('navLinks');
-toggle?.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
+// ── THEME ──────────────────────────────────────
+const THEME_KEY = 'neria-theme';
 
-// Close menu on link click
-navLinks?.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem(THEME_KEY, theme);
+}
 
-// Project filter buttons
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+function initTheme() {
+  const saved = localStorage.getItem(THEME_KEY);
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+}
+
+// Run immediately to avoid flash
+initTheme();
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  // ── THEME TOGGLE BUTTON ──────────────────────
+  document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.addEventListener('click', toggleTheme);
   });
-});
 
-// Animate elements on scroll
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
+  // ── NAV SCROLL ──────────────────────────────
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav?.classList.toggle('scrolled', window.scrollY > 20);
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ── MOBILE MENU ──────────────────────────────
+  const toggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  toggle?.addEventListener('click', () => navLinks?.classList.toggle('open'));
+  navLinks?.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+
+  // ── FILTER BUTTONS (projects page) ───────────
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
   });
-}, { threshold: 0.1 });
 
-document.querySelectorAll('.service-card, .project-item, .team-card, .project-full-card, .service-full-card').forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  observer.observe(el);
+  // ── SCROLL-TRIGGERED FADE-IN ─────────────────
+  const targets = document.querySelectorAll(
+    '.service-card, .project-item, .team-card, .project-full-card, .service-full-card, .value-item, .stat, .contact-item'
+  );
+  targets.forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(18px)';
+    el.style.transition = `opacity 0.55s ease ${i * 0.05}s, transform 0.55s ease ${i * 0.05}s`;
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  targets.forEach(el => observer.observe(el));
+
 });
