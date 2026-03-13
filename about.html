@@ -1,134 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neria Solutions | About Us</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .navbar {
-            background-color: #0056b3;
-        }
-        .navbar-nav .nav-link {
-            color: white !important;
-            font-weight: bold;
-        }
-        .navbar-nav .nav-link:hover {
-            background-color: #003d80;
-            border-radius: 5px;
-        }
-        .about-header {
-            text-align: center;
-            padding: 50px;
-            background: url('images/sadaf-amininia-d1QqFp1VRI8-unsplash.jpg') no-repeat center center/cover;
-            color: white;
-        }
-        .content-section {
-            padding: 50px 0;
-        }
-        .footer-container {
-            text-align: center;
-            padding: 20px;
-            background-color: #0056b3;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — Neria Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="T Solutions Logo" height="180">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-mark">N</span>
+      <span class="logo-text">Neria Solutions</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-eyebrow">
+        <span class="label-line"></span>
+        About Us
+      </div>
+      <h1>Innovating for a<br><em>Better Future</em></h1>
+      <p class="page-hero-sub">Through science and technology, we transform ambitious ideas into practical, real-world applications that matter.</p>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="about-intro-grid">
+        <div class="about-intro-text">
+          <div class="section-label"><span class="label-line"></span>Who We Are</div>
+          <h2>A Forward-Thinking Team of Builders</h2>
+          <p>Neria Solutions is a forward-thinking company dedicated to transforming scientific theories into practical, real-world applications. Our team of passionate scientists, developers, and educators is committed to solving global challenges through innovation and collaboration.</p>
+          <p>Based in Bloemfontein, South Africa, we believe that technology should serve communities — especially those who need it most. From agriculture to education to renewable energy, we build solutions with purpose.</p>
+          <a href="contact.html" class="text-link" style="margin-top: 8px;">Work with us →</a>
+        </div>
+        <div class="about-values">
+          <div class="value-item">
+            <span class="value-num">01</span>
+            <div>
+              <h4>Science-First</h4>
+              <p>Every product we build is grounded in research and evidence-based thinking.</p>
             </div>
-        </div>
-    </nav>
-    
-    <header class="about-header">
-        <div class="container">
-            <h1>About Neria Solutions</h1>
-            <p>Innovating for a better future through science and technology.</p>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="content-section text-center">
-            <h2>Who We Are</h2>
-            <p>Neria Solutions is a forward-thinking company dedicated to transforming scientific theories into practical, real-world applications. Our team of passionate scientists, developers, and educators is committed to solving global challenges through innovation and collaboration.</p>
-        </section>
-        
-        <section class="content-section text-center bg-light p-5">
-            <h2>Our Mission</h2>
-            <p>At Neria Solutions, we are dedicated to bridging the gap between research and real-world solutions. Our focus on agriculture and education drives us to create sustainable tools and technologies that enhance productivity, foster learning, and promote inclusivity.</p>
-            
-        </section>
-        
-       <section class="content-section text-center">
-  <h2>Meet Our Team</h2>
-  <p>
-    Our team consists of experts from diverse fields including agriculture, software development, and education. Together, we drive impactful solutions for industries and communities worldwide.
-  </p>
-
-  <div class="container mt-4">
-    <div class="row justify-content-center">
-      <!-- Team Member 1 -->
-      <div class="col-md-4 col-sm-6 mb-4">
-        <div class="card shadow border-0 p-3">
-          <h5 class="card-title mb-1">Pitso Walter Khoboko</h5>
-          <p class="mb-0">CEO and Lead Technical Developer</p>
-          <small class="text-muted">A seasoned software developer with over 6 years of experience in designing, building, and deploying innovative digital solutions. With his expertise as a (full-stack developer of mobile applications, cloud systems), he has contributed to projects that integrate technology with scientific research, education, and agriculture. With a strong foundation in modern development frameworks and a passion for problem-solving, he plays a key role in turning complex ideas into functional, user-friendly applications at Neria Solutions</small>
-        <div class="mt-2">
-            <a href="https://www.linkedin.com/in/pitso-khoboko/" target="_blank" title="Pitso's LinkedIn">
-              <i class="bi bi-linkedin" style="font-size: 1.5rem; color: #0077b5;"></i>
-            </a>
+          </div>
+          <div class="value-item">
+            <span class="value-num">02</span>
+            <div>
+              <h4>Inclusive by Design</h4>
+              <p>We build tools accessible to all South Africans, regardless of language or background.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-num">03</span>
+            <div>
+              <h4>Community Impact</h4>
+              <p>Our work prioritises real-world benefit over vanity metrics.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <span class="value-num">04</span>
+            <div>
+              <h4>Sustainability</h4>
+              <p>We build for the long term — both in code quality and environmental impact.</p>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Team Member 2 -->
-      <div class="col-md-4 col-sm-6 mb-4">
-        <div class="card shadow border-0 p-3">
-          <h5 class="card-title mb-1">Rankonane Mokoena</h5>
-          <p class="mb-0">Software Engineer</p>
-          <small class="text-muted">BSc Geo-Informatics, BSc Honours Computer Science, 2+ GIS experienece, 3+ years development experience</small>
-        </div>
-      </div>
-     
-      <!-- Add more team members below -->
-      <div class="col-md-4 col-sm-6 mb-4">
-        <div class="card shadow border-0 p-3">
-          <h5 class="card-title mb-1">Lilitha Mdutyana</h5>
-          <p class="mb-0">Quality Assurance</p>
-          <small class="text-muted">MSc Computer Informations, 2+ Business Analyst and Quality Assurance</small>
-        </div>
-      </div>
-        
     </div>
-  </div>
-</section>
-    </main>
+  </section>
 
-    <footer class="footer-container">
-        <p>&copy; 2025 Neria Solutions. All rights reserved.</p>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- MISSION -->
+  <section class="mission" style="padding-top: 0;">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-label">
+          <span class="label-line"></span>
+          Mission
+        </div>
+        <div class="mission-body">
+          <h2 class="section-title">Bridging Research & Reality</h2>
+          <p class="mission-text">
+            At Neria Solutions, we are dedicated to bridging the gap between research and real-world solutions. Our focus on agriculture and education drives us to create sustainable tools and technologies that enhance productivity, foster learning, and promote inclusivity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team-section">
+    <div class="container">
+      <div class="section-label"><span class="label-line"></span>Our People</div>
+      <h2 class="section-title">Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">PK</div>
+          <h3>Pitso Walter Khoboko</h3>
+          <div class="team-role">CEO & Lead Technical Developer</div>
+          <p>A seasoned full-stack developer with over 6 years of experience designing, building, and deploying innovative digital solutions. His expertise spans mobile applications and cloud systems, integrating technology with scientific research, education, and agriculture.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">RM</div>
+          <h3>Rankonane Mokoena</h3>
+          <div class="team-role">Software Engineer</div>
+          <p>BSc Geo-Informatics, BSc Honours Computer Science. Brings 2+ years of GIS experience and 3+ years of development experience to create spatially-aware, data-driven solutions.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">LM</div>
+          <h3>Lilitha Mdutyana</h3>
+          <div class="team-role">Quality Assurance</div>
+          <p>MSc Computer Information Systems with 2+ years of Business Analysis and Quality Assurance experience. Ensures every product we ship meets the highest standards of reliability and user experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-orb"></div>
+        <h2>Want to Join Us?</h2>
+        <p>We're always looking for passionate people who want to build technology that matters.</p>
+        <a href="contact.html" class="btn-primary btn-light">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-mark">N</span><span class="logo-text">Neria Solutions</span></a>
+          <p>Advancing science for a better tomorrow.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>21354, Turflaagte 2<br>Bloemfontein, 9323</p>
+          <a href="mailto:pwkhoboko@gmail.com">pwkhoboko@gmail.com</a>
+          <a href="tel:+27784325376">+27 78 432 5376</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Neria Solutions. All rights reserved.</span>
+        <span>neriasolutions.co.za</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
