@@ -1,59 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
+  <script>!function(){var t=localStorage.getItem('neria-theme')||(window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.setAttribute('data-theme',t)}();</script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Services — Neria Solutions</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script>
-    (function(){var t=localStorage.getItem('neria-theme');if(t)document.documentElement.setAttribute('data-theme',t);else if(!window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-theme','light');})();
-  </script>
 </head>
 <body>
   <nav class="nav" id="nav">
-    <a href="index.html" class="nav-logo" aria-label="Neria Solutions">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none" style="height:44px;width:auto">
-        <defs>
-          <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c994"/><stop offset="55%" stop-color="#c8a96e"/><stop offset="100%" stop-color="#a8894e"/></linearGradient>
-          <linearGradient id="g2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#c8a96e"/><stop offset="100%" stop-color="#e8d8a8"/></linearGradient>
-          <filter id="glow2"><feGaussianBlur stdDeviation="1.2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <ellipse cx="30" cy="30" rx="21" ry="9" stroke="url(#g1)" stroke-width="0.75" opacity="0.35" transform="rotate(-35 30 30)"/>
-        <ellipse cx="30" cy="30" rx="21" ry="9" stroke="url(#g1)" stroke-width="0.75" opacity="0.35" transform="rotate(35 30 30)"/>
-        <line x1="19" y1="17" x2="19" y2="43" stroke="url(#g1)" stroke-width="2.4" stroke-linecap="round"/>
-        <line x1="19" y1="17" x2="41" y2="43" stroke="url(#g2)" stroke-width="2.4" stroke-linecap="round"/>
-        <line x1="41" y1="17" x2="41" y2="43" stroke="url(#g1)" stroke-width="2.4" stroke-linecap="round"/>
-        <circle cx="30" cy="30" r="3.8" fill="url(#g1)" filter="url(#glow2)"/>
-        <circle cx="30" cy="8" r="2.2" fill="#c8a96e" opacity="0.85" filter="url(#glow2)"/>
-        <circle cx="53" cy="22" r="1.6" fill="#e0c994" opacity="0.6"/>
-        <circle cx="7" cy="40" r="1.6" fill="#e0c994" opacity="0.6"/>
-        <text x="66" y="26" font-family="'Cormorant Garamond',Georgia,serif" font-size="18" font-weight="600" letter-spacing="3.5" fill="url(#g1)">NERIA</text>
-        <line x1="66" y1="31" x2="210" y2="31" stroke="url(#g1)" stroke-width="0.4" opacity="0.45"/>
-        <text x="67" y="43" font-family="'DM Sans',Helvetica,sans-serif" font-size="8" font-weight="300" letter-spacing="5.8" fill="var(--text-dim)">SOLUTIONS</text>
-      </svg>
+    <a href="index.html" class="nav-logo" aria-label="Neria Solutions" style="display:flex;align-items:center">
+      <div style="height:44px;width:auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <defs>
+    <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c994"/><stop offset="55%" stop-color="#c8a96e"/><stop offset="100%" stop-color="#a8894e"/></linearGradient>
+    <linearGradient id="lg2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#c8a96e"/><stop offset="100%" stop-color="#e8d8a8"/></linearGradient>
+    <filter id="gf"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="30" cy="30" rx="21" ry="9" stroke="url(#lg1)" stroke-width="0.75" opacity="0.35" transform="rotate(-35 30 30)"/>
+  <ellipse cx="30" cy="30" rx="21" ry="9" stroke="url(#lg1)" stroke-width="0.75" opacity="0.35" transform="rotate(35 30 30)"/>
+  <line x1="19" y1="17" x2="19" y2="43" stroke="url(#lg1)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="19" y1="17" x2="41" y2="43" stroke="url(#lg2)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="41" y1="17" x2="41" y2="43" stroke="url(#lg1)" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="30" cy="30" r="3.8" fill="url(#lg1)" filter="url(#gf)"/>
+  <circle cx="30" cy="8" r="2.2" fill="#c8a96e" opacity="0.85" filter="url(#gf)"/>
+  <circle cx="53" cy="22" r="1.6" fill="#e0c994" opacity="0.6"/>
+  <circle cx="7" cy="40" r="1.6" fill="#e0c994" opacity="0.6"/>
+  <text x="66" y="26" font-family="'Cormorant Garamond',Georgia,serif" font-size="18" font-weight="600" letter-spacing="3.5" fill="url(#lg1)">NERIA</text>
+  <line x1="66" y1="31" x2="210" y2="31" stroke="url(#lg1)" stroke-width="0.4" opacity="0.45"/>
+  <text x="67" y="43" font-family="'DM Sans',Helvetica,sans-serif" font-size="8" font-weight="300" letter-spacing="5.8" fill="var(--txd)">SOLUTIONS</text>
+</svg></div>
     </a>
     <div class="nav-right">
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" >Home</a></li>
-        <li><a href="about.html" >About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="services.html" class="active">Services</a></li>
-        <li><a href="projects.html" >Projects</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
       </ul>
-      <button class="theme-toggle" aria-label="Toggle theme">
+      <button class="theme-toggle" aria-label="Toggle dark/light mode">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
         <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       </button>
       <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+
   <section class="page-hero">
     <div class="container">
       <div class="page-hero-eyebrow"><span class="label-line"></span>What We Do</div>
       <h1>Our <em>Core Services</em></h1>
-      <p class="page-hero-sub">From scientific software to educational tools and renewable energy — we build solutions that create lasting impact.</p>
+      <p class="page-hero-sub">From scientific software to educational tools and renewable energy &mdash; we build solutions that create lasting impact.</p>
     </div>
   </section>
 
@@ -65,7 +64,7 @@
           <div>
             <h3>Science Solutions</h3>
             <p>We develop applications that enhance scientific theories into real-world impactful tools. From farm monitoring systems to data archiving platforms, our science solutions are purpose-built for researchers, field workers, and institutions across South Africa.</p>
-            <div class="service-features"><span>Research Software</span><span>Data Capture & Archiving</span><span>Farm Monitoring</span><span>GIS Integration</span><span>Cloud Systems</span></div>
+            <div class="service-features"><span>Research Software</span><span>Data Capture &amp; Archiving</span><span>Farm Monitoring</span><span>GIS Integration</span><span>Cloud Systems</span></div>
           </div>
         </div>
         <div class="service-full-card">
@@ -88,7 +87,7 @@
           <div class="service-full-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
           <div>
             <h3>Custom Software Development</h3>
-            <p>Full-stack development of web and mobile applications tailored to your specific needs. Whether you need a web platform, mobile app, or API integration — our team brings 6+ years of hands-on development experience.</p>
+            <p>Full-stack development of web and mobile applications tailored to your specific needs. Whether you need a web platform, mobile app, or API integration &mdash; our team brings 6+ years of hands-on development experience.</p>
             <div class="service-features"><span>Web Applications</span><span>Mobile Apps</span><span>API Development</span><span>Cloud Deployment</span><span>Full-Stack</span></div>
           </div>
         </div>
@@ -101,7 +100,7 @@
       <div class="cta-box">
         <div class="cta-orb"></div>
         <h2>Have a Project in Mind?</h2>
-        <p>Tell us what you're building and let's see how we can help make it a reality.</p>
+        <p>Tell us what you&rsquo;re building and let&rsquo;s see how we can help make it a reality.</p>
         <a href="contact.html" class="btn-primary btn-light">Start a Conversation</a>
       </div>
     </div>
@@ -111,23 +110,25 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" aria-label="Neria Solutions">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none" class="footer-logo">
-              <defs><linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c994"/><stop offset="55%" stop-color="#c8a96e"/><stop offset="100%" stop-color="#a8894e"/></linearGradient><linearGradient id="fg2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#c8a96e"/><stop offset="100%" stop-color="#e8d8a8"/></linearGradient></defs>
-              <ellipse cx="30" cy="30" rx="21" ry="9" stroke="url(#fg1)" stroke-width="0.75" opacity="0.35" transform="rotate(-35 30 30)"/>
-              <ellipse cx="30" cy="30" rx="21" ry="9" stroke="url(#fg1)" stroke-width="0.75" opacity="0.35" transform="rotate(35 30 30)"/>
-              <line x1="19" y1="17" x2="19" y2="43" stroke="url(#fg1)" stroke-width="2.4" stroke-linecap="round"/>
-              <line x1="19" y1="17" x2="41" y2="43" stroke="url(#fg2)" stroke-width="2.4" stroke-linecap="round"/>
-              <line x1="41" y1="17" x2="41" y2="43" stroke="url(#fg1)" stroke-width="2.4" stroke-linecap="round"/>
-              <circle cx="30" cy="30" r="3.8" fill="url(#fg1)"/>
-              <circle cx="30" cy="8" r="2.2" fill="#c8a96e" opacity="0.85"/>
-              <circle cx="53" cy="22" r="1.6" fill="#e0c994" opacity="0.6"/>
-              <circle cx="7" cy="40" r="1.6" fill="#e0c994" opacity="0.6"/>
-              <text x="66" y="26" font-family="'Cormorant Garamond',Georgia,serif" font-size="18" font-weight="600" letter-spacing="3.5" fill="url(#fg1)">NERIA</text>
-              <line x1="66" y1="31" x2="210" y2="31" stroke="url(#fg1)" stroke-width="0.4" opacity="0.45"/>
-              <text x="67" y="43" font-family="'DM Sans',Helvetica,sans-serif" font-size="8" font-weight="300" letter-spacing="5.8" fill="var(--text-dim)">SOLUTIONS</text>
-            </svg>
-          </a>
+          <a href="index.html" aria-label="Neria Solutions"><div style="height:36px;width:auto"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <defs>
+    <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#e0c994"/><stop offset="55%" stop-color="#c8a96e"/><stop offset="100%" stop-color="#a8894e"/></linearGradient>
+    <linearGradient id="lg2" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#c8a96e"/><stop offset="100%" stop-color="#e8d8a8"/></linearGradient>
+    <filter id="gf"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <ellipse cx="30" cy="30" rx="21" ry="9" stroke="url(#lg1)" stroke-width="0.75" opacity="0.35" transform="rotate(-35 30 30)"/>
+  <ellipse cx="30" cy="30" rx="21" ry="9" stroke="url(#lg1)" stroke-width="0.75" opacity="0.35" transform="rotate(35 30 30)"/>
+  <line x1="19" y1="17" x2="19" y2="43" stroke="url(#lg1)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="19" y1="17" x2="41" y2="43" stroke="url(#lg2)" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="41" y1="17" x2="41" y2="43" stroke="url(#lg1)" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="30" cy="30" r="3.8" fill="url(#lg1)" filter="url(#gf)"/>
+  <circle cx="30" cy="8" r="2.2" fill="#c8a96e" opacity="0.85" filter="url(#gf)"/>
+  <circle cx="53" cy="22" r="1.6" fill="#e0c994" opacity="0.6"/>
+  <circle cx="7" cy="40" r="1.6" fill="#e0c994" opacity="0.6"/>
+  <text x="66" y="26" font-family="'Cormorant Garamond',Georgia,serif" font-size="18" font-weight="600" letter-spacing="3.5" fill="url(#lg1)">NERIA</text>
+  <line x1="66" y1="31" x2="210" y2="31" stroke="url(#lg1)" stroke-width="0.4" opacity="0.45"/>
+  <text x="67" y="43" font-family="'DM Sans',Helvetica,sans-serif" font-size="8" font-weight="300" letter-spacing="5.8" fill="var(--txd)">SOLUTIONS</text>
+</svg></div></a>
           <p>Advancing science for a better tomorrow. Bridging research and real-world impact.</p>
         </div>
         <div class="footer-links">
@@ -143,12 +144,12 @@
         <div class="footer-contact">
           <h4>Contact</h4>
           <p>21354, Turflaagte 2<br>Bloemfontein, 9323</p>
-          <a href="mailto:pwkhoboko@gmail.com">pwkhoboko@gmail.com</a>
+          <a href="mailto:pwkhoboko&#64;gmail.com">pwkhoboko&#64;gmail.com</a>
           <a href="tel:+27784325376">+27 78 432 5376</a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2025 Neria Solutions. All rights reserved.</span>
+        <span>&copy; 2025 Neria Solutions. All rights reserved.</span>
         <span>neriasolutions.co.za</span>
       </div>
     </div>
