@@ -1,95 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neria Solutions - Services</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .navbar {
-            background-color: #0056b3;
-        }
-        .navbar-nav .nav-link {
-            color: white !important;
-            font-weight: bold;
-        }
-        .navbar-nav .nav-link:hover {
-            background-color: #003d80;
-            border-radius: 5px;
-        }
-        .service-tile {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-        .service-tile:hover {
-            transform: translateY(-5px);
-        }
-        .footer-container {
-            text-align: center;
-            padding: 20px;
-            background-color: #0056b3;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — Neria Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="T Solutions Logo" height="180">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-mark">N</span>
+      <span class="logo-text">Neria Solutions</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-eyebrow"><span class="label-line"></span>What We Do</div>
+      <h1>Our <em>Core Services</em></h1>
+      <p class="page-hero-sub">From scientific software to educational tools and renewable energy — we build solutions that create lasting impact.</p>
+    </div>
+  </section>
+
+  <section class="services-section">
+    <div class="container">
+      <div class="services-full-grid">
+
+        <div class="service-full-card">
+          <div class="service-full-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <div>
+            <h3>Science Solutions</h3>
+            <p>We develop applications that enhance scientific theories into real-world impactful tools. From farm monitoring systems to data archiving platforms, our science solutions are purpose-built for researchers, field workers, and institutions across South Africa.</p>
+            <div class="service-features">
+              <span>Research Software</span>
+              <span>Data Capture & Archiving</span>
+              <span>Farm Monitoring</span>
+              <span>GIS Integration</span>
+              <span>Cloud Systems</span>
             </div>
+          </div>
         </div>
-    </nav>
-    
-    <main class="container py-5">
-        <h1 class="text-center mb-4">Our Services</h1>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="service-tile">
-                    <h2>Science Solutions</h2>
-                    <p>Developing applications to enhance science theories into real world impactful tools.</p>
-                </div>
+
+        <div class="service-full-card">
+          <div class="service-full-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <div>
+            <h3>Educational Tools</h3>
+            <p>Creating apps that teach maths and science in native South African languages. We believe every learner deserves high-quality STEM education in a language they understand. Our tools are designed for classrooms, self-paced learning, and AI-powered tutoring.</p>
+            <div class="service-features">
+              <span>STEM Learning Apps</span>
+              <span>Native Language Support</span>
+              <span>AI-Powered Tutoring</span>
+              <span>Curriculum Aligned</span>
+              <span>Mobile First</span>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="service-tile">
-                    <h2>Educational Tools</h2>
-                    <p>Creating apps that teach maths and science in native South African languages.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="service-tile">
-                    <h2>Renewable Energy Solutions</h2>
-                    <p>Innovating sustainable energy solutions for communities in need.</p>
-                </div>
-            </div>
+          </div>
         </div>
-    </main>
-    
-    <footer class="footer-container">
-        <p>&copy; 2025 Neria Solutions. All rights reserved.</p>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <div class="service-full-card">
+          <div class="service-full-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <div>
+            <h3>Renewable Energy Solutions</h3>
+            <p>Innovating sustainable energy solutions for communities in need. We research and build technology around solar, wind, and smart irrigation to improve quality of life in underserved communities — particularly in rural South Africa.</p>
+            <div class="service-features">
+              <span>Solar Technology</span>
+              <span>Wind Energy Research</span>
+              <span>Smart Irrigation</span>
+              <span>Community Energy</span>
+              <span>Sustainability</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-full-card">
+          <div class="service-full-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div>
+            <h3>Custom Software Development</h3>
+            <p>Full-stack development of web and mobile applications tailored to your specific needs. Whether you need a web platform, mobile app, or API integration — our team brings 6+ years of hands-on development experience to your project.</p>
+            <div class="service-features">
+              <span>Web Applications</span>
+              <span>Mobile Apps</span>
+              <span>API Development</span>
+              <span>Cloud Deployment</span>
+              <span>Full-Stack</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-orb"></div>
+        <h2>Have a Project in Mind?</h2>
+        <p>Tell us what you're building and let's see how we can help make it a reality.</p>
+        <a href="contact.html" class="btn-primary btn-light">Start a Conversation</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-mark">N</span><span class="logo-text">Neria Solutions</span></a>
+          <p>Advancing science for a better tomorrow.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>21354, Turflaagte 2<br>Bloemfontein, 9323</p>
+          <a href="mailto:pwkhoboko@gmail.com">pwkhoboko@gmail.com</a>
+          <a href="tel:+27784325376">+27 78 432 5376</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Neria Solutions. All rights reserved.</span>
+        <span>neriasolutions.co.za</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
