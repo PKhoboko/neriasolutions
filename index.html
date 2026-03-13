@@ -1,124 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
-    <meta property="og:title" content="Neria Solutions">
-    <meta property="og:description" content="Neria Solutions | Transforming Science | Software Development in Agriculture | Software Development in Education | Event Organiser Online | Scientific Research into Real World Application">
-    <meta property="og:image" content="https://neriasolutions.tech/logo.png">
-    <meta property="og:url" content="https://neriasolutions.tech">
-    <meta property="og:type" content="website">
-    <title>Neria Solutions | Data Science | Software Development in Science | Software Development in Education | Event Organiser Online | Scientific Research into Real World Application</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .navbar {
-            background-color: #0056b3;
-        }
-        .navbar-nav .nav-link {
-            color: white !important;
-            font-weight: bold;
-        }
-        .navbar-nav .nav-link:hover {
-            background-color: #003d80;
-            border-radius: 5px;
-        }
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            background: url('images/muha-ajjan-sL2BRR1cuvM-unsplash.jpg') no-repeat center center/cover;
-            min-height: 50vh;
-            padding: 50px;
-        }
-        .btn-custom {
-            background-color: #ff9800;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease-in-out;
-        }
-        .btn-custom:hover {
-            background-color: #e68900;
-        }
-.mission-statement {
-    max-width: 1800px;
-    text-align: center;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.mission-statement h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.mission-statement p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #555;
-}
-        .footer-container {
-            text-align: center;
-            padding: 20px;
-            background-color: #0056b3;
-            color: white;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neria Solutions — Advancing Science for a Better Tomorrow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="Neria Solutions Logo" height="160">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <span class="logo-mark">N</span>
+      <span class="logo-text">Neria Solutions</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        South Africa · Science · Innovation
+      </div>
+      <h1 class="hero-title">
+        Advancing Science<br>
+        <em>for a Better</em><br>
+        Tomorrow
+      </h1>
+      <p class="hero-sub">
+        Bridging the gap between innovation and real-world impact in science, education, and beyond.
+      </p>
+      <div class="hero-actions">
+        <a href="services.html" class="btn-primary">Explore Services</a>
+        <a href="about.html" class="btn-ghost">Our Story →</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission">
+    <div class="container">
+      <div class="mission-grid">
+        <div class="mission-label">
+          <span class="label-line"></span>
+          Mission
         </div>
-    </nav>
-    
-    <main>
-        <section class="hero d-flex align-items-center">
-            <div class="container text-center">
-                <h1>Advancing Science for a Better Tomorrow</h1>
-                <p>Bridging the gap between innovation and real-world impact in science, education, and beyond.</p>
-                <a href="about.html" class="btn btn-custom">Learn More</a>
-            </div>
-        </section>
+        <div class="mission-body">
+          <h2 class="section-title">Where Research Meets Reality</h2>
+          <p class="mission-text">
+            At Neria Solutions, we are dedicated to bridging the gap between research and real-world solutions. Our focus on science, innovation, and education drives us to create sustainable tools and technologies that enhance productivity, foster learning, and promote inclusivity.
+          </p>
+          <a href="about.html" class="text-link">Learn more about us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-         <section class="mission-statement">
-            <h2>Mission Statement</h2>
-            <p>
-                At Neria Solutions, we are dedicated to bridging the gap between research and real-world solutions. <br/> Our focus on science, innovation, <br/>and  education drives us to create sustainable tools and technologies that enhance productivity, <br/>foster learning, and promote inclusivity.
-            </p>
-        </section>
-    </main>
+  <!-- SERVICES PREVIEW -->
+  <section class="services-preview">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span class="label-line"></span>
+          What We Do
+        </div>
+        <h2 class="section-title">Our Core Services</h2>
+      </div>
+      <div class="services-grid">
+        <a href="services.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3>Science Solutions</h3>
+          <p>Developing applications to enhance scientific theories into real-world impactful tools.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a href="services.html" class="service-card service-card--accent">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3>Educational Tools</h3>
+          <p>Creating apps that teach maths and science in native South African languages.</p>
+          <span class="card-arrow">→</span>
+        </a>
+        <a href="services.html" class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3>Renewable Energy</h3>
+          <p>Innovating sustainable energy solutions for underserved communities in need.</p>
+          <span class="card-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <footer class="footer-container">
-        <p>&copy; 2025 Neria Solutions. All rights reserved.</p>
-    </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-number">6+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Core Services</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">ZA</span>
+          <span class="stat-label">South Africa Based</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number">∞</span>
+          <span class="stat-label">Possibilities</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS PREVIEW -->
+  <section class="projects-preview">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">
+          <span class="label-line"></span>
+          Active Work
+        </div>
+        <h2 class="section-title">Featured Projects</h2>
+      </div>
+      <div class="projects-list">
+        <div class="project-item">
+          <div class="project-status in-progress">In Progress</div>
+          <h3>Farm Mapping & Monitoring</h3>
+          <p>Applications for agricultural farm mapping, monitoring, and data capture systems.</p>
+          <div class="project-tags">
+            <span>Agriculture</span><span>GIS</span><span>Data</span>
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-status in-progress">In Progress</div>
+          <h3>Monate-Event</h3>
+          <p>Making entertainment digitally more accessible — a comprehensive event management platform.</p>
+          <div class="project-tags">
+            <span>Entertainment</span><span>Web App</span>
+          </div>
+          <a href="https://monate-event.co.za" target="_blank" class="project-link">Visit Site →</a>
+        </div>
+        <div class="project-item">
+          <div class="project-status planned">Planned</div>
+          <h3>AI-Powered Tutoring</h3>
+          <p>STEM learning tools in native South African languages to promote inclusivity in education.</p>
+          <div class="project-tags">
+            <span>Education</span><span>AI</span><span>Languages</span>
+          </div>
+        </div>
+      </div>
+      <div class="section-footer">
+        <a href="projects.html" class="btn-primary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-orb"></div>
+        <h2>Ready to Collaborate?</h2>
+        <p>Have a project in mind or want to learn more about what we do? We'd love to hear from you.</p>
+        <a href="contact.html" class="btn-primary btn-light">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="logo-mark">N</span>
+            <span class="logo-text">Neria Solutions</span>
+          </a>
+          <p>Advancing science for a better tomorrow. Bridging research and real-world impact.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p>21354, Turflaagte 2<br>Bloemfontein, 9323</p>
+          <a href="mailto:pwkhoboko@gmail.com">pwkhoboko@gmail.com</a>
+          <a href="tel:+27784325376">+27 78 432 5376</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Neria Solutions. All rights reserved.</span>
+        <span>neriasolutions.co.za</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
