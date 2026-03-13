@@ -1,25 +1,12 @@
 /* =============================================
-   NERIA SOLUTIONS — main.js
+   NERIA SOLUTIONS — main.js v3
    ============================================= */
 
-const THEME_KEY = 'neria-theme';
-
-// Apply theme to <html> element
-function applyTheme(theme) {
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem(THEME_KEY, theme);
-}
-
-// Set theme on page load before anything renders
+// ── THEME (runs immediately, before DOM) ─────
 (function () {
   var saved = localStorage.getItem('neria-theme');
-  if (saved) {
-    document.documentElement.setAttribute('data-theme', saved);
-  } else if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  }
+  var theme = saved ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
 })();
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -28,8 +15,9 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.theme-toggle').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var current = document.documentElement.getAttribute('data-theme');
-      var next = current === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
+      var next = (current === 'dark') ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('neria-theme', next);
     });
   });
 
@@ -41,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ── MOBILE MENU ──────────────────────────────
   var navToggle = document.getElementById('navToggle');
-  var navLinks = document.getElementById('navLinks');
+  var navLinks  = document.getElementById('navLinks');
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', function () {
       navLinks.classList.toggle('open');
@@ -56,32 +44,33 @@ document.addEventListener('DOMContentLoaded', function () {
   // ── FILTER BUTTONS ───────────────────────────
   document.querySelectorAll('.filter-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
-      document.querySelectorAll('.filter-btn').forEach(function (b) {
-        b.classList.remove('active');
-      });
+      document.querySelectorAll('.filter-btn').forEach(function (b) { b.classList.remove('active'); });
       btn.classList.add('active');
     });
   });
 
   // ── SCROLL FADE-IN ───────────────────────────
   var targets = document.querySelectorAll(
-    '.service-card, .project-item, .team-card, .project-full-card, ' +
-    '.service-full-card, .value-item, .stat, .contact-item'
+    '.service-card,.project-item,.team-card,.project-full-card,.service-full-card,.value-item,.stat,.contact-item'
   );
   targets.forEach(function (el, i) {
     el.style.opacity = '0';
     el.style.transform = 'translateY(18px)';
     el.style.transition = 'opacity 0.55s ease ' + (i * 0.05) + 's, transform 0.55s ease ' + (i * 0.05) + 's';
   });
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  targets.forEach(function (el) { observer.observe(el); });
+  if ('IntersectionObserver' in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    targets.forEach(function (el) { obs.observe(el); });
+  } else {
+    targets.forEach(function (el) { el.style.opacity = '1'; el.style.transform = 'none'; });
+  }
 
 });
