@@ -1,67 +1,80 @@
 /* =============================================
    NERIA SOLUTIONS — main.js
-   Theme toggle, nav, mobile menu, animations
    ============================================= */
 
-// ── THEME ──────────────────────────────────────
 const THEME_KEY = 'neria-theme';
 
+// Apply theme to <html> element
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem(THEME_KEY, theme);
 }
 
-function initTheme() {
-  const saved = localStorage.getItem(THEME_KEY);
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(saved || (prefersDark ? 'dark' : 'light'));
-}
+// Set theme on page load before anything renders
+(function () {
+  var saved = localStorage.getItem('neria-theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+  } else if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+})();
 
-function toggleTheme() {
-  const current = document.documentElement.getAttribute('data-theme');
-  applyTheme(current === 'dark' ? 'light' : 'dark');
-}
+document.addEventListener('DOMContentLoaded', function () {
 
-// Run immediately to avoid flash
-initTheme();
-
-document.addEventListener('DOMContentLoaded', () => {
-
-  // ── THEME TOGGLE BUTTON ──────────────────────
-  document.querySelectorAll('.theme-toggle').forEach(btn => {
-    btn.addEventListener('click', toggleTheme);
+  // ── THEME TOGGLE ─────────────────────────────
+  document.querySelectorAll('.theme-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+    });
   });
 
-  // ── NAV SCROLL ──────────────────────────────
-  const nav = document.getElementById('nav');
-  const onScroll = () => nav?.classList.toggle('scrolled', window.scrollY > 20);
-  window.addEventListener('scroll', onScroll, { passive: true });
+  // ── NAV SCROLL ───────────────────────────────
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
 
   // ── MOBILE MENU ──────────────────────────────
-  const toggle = document.getElementById('navToggle');
-  const navLinks = document.getElementById('navLinks');
-  toggle?.addEventListener('click', () => navLinks?.classList.toggle('open'));
-  navLinks?.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+  var navToggle = document.getElementById('navToggle');
+  var navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function () {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+      });
+    });
+  }
 
-  // ── FILTER BUTTONS (projects page) ───────────
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  // ── FILTER BUTTONS ───────────────────────────
+  document.querySelectorAll('.filter-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.filter-btn').forEach(function (b) {
+        b.classList.remove('active');
+      });
       btn.classList.add('active');
     });
   });
 
-  // ── SCROLL-TRIGGERED FADE-IN ─────────────────
-  const targets = document.querySelectorAll(
-    '.service-card, .project-item, .team-card, .project-full-card, .service-full-card, .value-item, .stat, .contact-item'
+  // ── SCROLL FADE-IN ───────────────────────────
+  var targets = document.querySelectorAll(
+    '.service-card, .project-item, .team-card, .project-full-card, ' +
+    '.service-full-card, .value-item, .stat, .contact-item'
   );
-  targets.forEach((el, i) => {
+  targets.forEach(function (el, i) {
     el.style.opacity = '0';
     el.style.transform = 'translateY(18px)';
-    el.style.transition = `opacity 0.55s ease ${i * 0.05}s, transform 0.55s ease ${i * 0.05}s`;
+    el.style.transition = 'opacity 0.55s ease ' + (i * 0.05) + 's, transform 0.55s ease ' + (i * 0.05) + 's';
   });
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.style.opacity = '1';
         entry.target.style.transform = 'translateY(0)';
@@ -69,6 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold: 0.1 });
-  targets.forEach(el => observer.observe(el));
+  targets.forEach(function (el) { observer.observe(el); });
 
 });
