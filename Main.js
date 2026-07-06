@@ -31,13 +31,26 @@ document.addEventListener('DOMContentLoaded', function () {
   var navToggle = document.getElementById('navToggle');
   var navLinks  = document.getElementById('navLinks');
   if (navToggle && navLinks) {
-    navToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.addEventListener('click', function (event) {
+      event.stopPropagation();
+      var isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.classList.toggle('nav-open', isOpen);
     });
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
       });
+    });
+    document.addEventListener('click', function (event) {
+      if (!navLinks.contains(event.target) && !navToggle.contains(event.target) && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
+      }
     });
   }
 
